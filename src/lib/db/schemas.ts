@@ -16,5 +16,6 @@ export const triggers = pgTable("triggers", {
 export const selectTriggersSchema = createSelectSchema(triggers);
 export const insertTriggersSchema = createInsertSchema(triggers);
 
+// 'properties' should be TriggerProperty[]
 export type Trigger = z.infer<typeof selectTriggersSchema>;
 export type NewTrigger = z.infer<typeof selectTriggersSchema>;
