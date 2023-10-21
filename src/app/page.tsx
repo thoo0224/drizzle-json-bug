@@ -1,5 +1,5 @@
-import { db } from "./lib/db";
-import { triggers } from "./lib/db/schemas";
+import { db } from "../lib/db";
+import { triggers } from "../lib/db/schemas";
 
 export default async function Home() {
   const trigger = await db.select().from(triggers);
